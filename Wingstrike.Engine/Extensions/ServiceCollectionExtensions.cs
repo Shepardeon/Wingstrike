@@ -12,7 +12,7 @@ public static class ServiceCollectionExtensions
     public static IServiceCollection AddGameConfiguration<TGame>(this IServiceCollection services) where TGame : class, IGame
     {
         // Base DI
-        return services.AddScoped<IGame, TGame>();
+        return services.AddSingleton<IGame, TGame>();
     }
 
     public static IServiceCollection AddPlugins(this IServiceCollection services)
